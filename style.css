@@ -1,0 +1,90 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  //padding: 20px;
+  background-color: #aaa;
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Set minimum height for full viewport */
+
+
+  /* Existing styles... */
+
+  background-image: url("bg3.jpg"); /* Replace with your image path */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  background-size: cover; /* Stretch image to cover the entire background */
+  background-position: center; /* Center the image horizontally and vertically */
+backdrop-filter: blur(5px);
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 40px; /* Add space between title and grid */
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: 1fr;
+  
+  gap: 10px;
+  border-radius: 10px;
+
+  margin: 0 auto;
+}
+
+.day-container {
+
+  display: flex;
+
+  width: 100%;  /* Full width to fill the grid cell */
+  flex-direction: row;
+  align-items: center; /* Text alignment within the container */
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color:#111;
+}
+
+.day-title {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  margin-top: 5px;
+width: 30%;
+}
+
+.day-plan {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #FFf;
+  border-radius: 5px;
+  font-size: 1em;
+  //color: #666;
+  width: 70%;
+  margin-left:20px;
+}
+
+.weekend {
+  //color: #FFD700;
+}
+
+button {
+  display: block;
+  margin: 15px auto;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFD700;
+  color: #111;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
