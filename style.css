@@ -46,9 +46,9 @@ h1 {
   font-size: 1em;
   font-weight: bold;
   color: #fff;
-  text-align: right;
+  text-align: left;
   margin-top: 5px;
-width: 30%;
+width: 10%;
 }
 
 .day-plan {
@@ -59,7 +59,7 @@ width: 30%;
   border-radius: 5px;
   font-size: 1em;
   align-items: center; /* Align content vertically */
-  width: 70%;
+  width: 90%;
   height: 2em; /* Set a fixed height here (adjust based on content) */
   margin-left:20px;
 }
@@ -84,7 +84,7 @@ width: 30%;
 button {
   display: block;
   margin: 25px auto;
-  padding: 12px 30px;
+  padding: 30px 60px;
   border: none;
   border-radius: 5px;
   background-color: #FFD700;
