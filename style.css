@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0;
   //padding: 20px;
-  background-color: #aaa;
+  background-color: #444;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   align-items: center; /* Center horizontally */
@@ -11,11 +11,7 @@ body {
 
   /* Existing styles... */
 
-  background-image: url("bg3.jpg"); /* Replace with your image path */
-  background-repeat: no-repeat; /* Prevent image repetition */
-  background-size: cover; /* Stretch image to cover the entire background */
-  background-position: center; /* Center the image horizontally and vertically */
-backdrop-filter: blur(5px);
+
 }
 
 h1 {
