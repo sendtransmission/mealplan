@@ -31,18 +31,22 @@ function randomizeMeals() {
   const dayPlanElements = document.querySelectorAll(".day-plan");  // Target .day-plan elements
   const totalWeight = meals.reduce((acc, meal) => acc + meal.weight, 0);
 
-  dayPlanElements.forEach((dayPlan, index) => {  // Loop through each dayPlan element
-    let randomValue = Math.random() * totalWeight;
-    let chosenMeal;
+  dayPlanElements.forEach((dayPlan, index) => {
+  let randomValue = Math.random() * totalWeight;
+  let chosenMeal;
 
-    for (const meal of meals) {
-      randomValue -= meal.weight;
-      if (randomValue <= 0) {
-        chosenMeal = meal;
-        break;
-      }
+  // Filter out chosen meals from the original list
+  const availableMeals = meals.filter(meal => !chosenMeals.includes(meal));
+
+  for (const meal of availableMeals) {
+    randomValue -= meal.weight;
+    if (randomValue <= 0) {
+      chosenMeal = meal;
+      chosenMeals.push(chosenMeal); // Add chosen meal to the tracking list
+      break;
     }
+  }
 
-    dayPlan.textContent = chosenMeal.name;  // Update content of .day-plan
-  });
+  dayPlan.textContent = chosenMeal.name;
+});
 }
