@@ -18,34 +18,27 @@ const meals = [
   { name: "French dip", weight: 1 },
 ];
 
-function shuffleAndAssignMeals() {
-  // Copy the meals array to avoid modifying the original
-  const availableMeals = [...meals];
+window.onload = function() {
+  randomizeMeals(); // Call your randomization function on load
+};
 
-  // Select seven random meals without repetition
-  const chosenMeals = [];
-  for (let i = 0; i < 7; i++) {
-    const randomIndex = Math.floor(Math.random() * availableMeals.length);
-    chosenMeals.push(availableMeals.splice(randomIndex, 1)[0]);
-  }
 
-  // Option 1: Update within the Loop (uncomment this block)
-  /*
-  for (let i = 0; i < 7; i++) {
-    const chosenMeal = chosenMeals[i];
-    const dayPlan = document.querySelector(`.day-plan:nth-child(${i + 1})`);
-    if (dayPlan) {
-      dayPlan.textContent = chosenMeal;
+function randomizeMeals() {
+  const dayPlanElements = document.querySelectorAll(".day-plan");  // Target .day-plan elements
+  const totalWeight = meals.reduce((acc, meal) => acc + meal.weight, 0);
+
+  dayPlanElements.forEach((dayPlan, index) => {  // Loop through each dayPlan element
+    let randomValue = Math.random() * totalWeight;
+    let chosenMeal;
+
+    for (const meal of meals) {
+      randomValue -= meal.weight;
+      if (randomValue <= 0) {
+        chosenMeal = meal;
+        break;
+      }
     }
-  }
-  */
 
-  // Option 2: Update After Selecting (uncomment this block)
-  const dayPlanElements = document.querySelectorAll(".day-plan");
-  dayPlanElements.forEach((dayPlan, index) => {
-    dayPlan.textContent = chosenMeals[index];
+    dayPlan.textContent = chosenMeal.name;  // Update content of .day-plan
   });
 }
-
-// Call the function on page load (assuming mealplan.js is loaded after the HTML)
-window.onload = shuffleAndAssignMeals;
