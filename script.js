@@ -18,14 +18,18 @@ const meals = [
   { name: "French dip", weight: 1 },
 ];
 
-// Global variable to track chosen meals for the week (empty array)
-let chosenMeals = [];
+
+function generateMealPlan() {
+  // Global variable for this function's scope
+  let chosenMeals = [];
+
+  // Call your randomization function here
+  randomizeMeals(chosenMeals);
+}
 
 window.onload = function() {
-  randomizeMeals(); // Call your randomization function on load
+  generateMealPlan(); // Call the function on load
 };
-
-
 function randomizeMeals() {
   const dayPlanElements = document.querySelectorAll(".day-plan"); // Target .day-plan elements
   const totalWeight = meals.reduce((acc, meal) => acc + meal.weight, 0);
