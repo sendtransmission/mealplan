@@ -18,6 +18,9 @@ const meals = [
   { name: "French dip", weight: 1 },
 ];
 
+// Global variable to track chosen meals for the week
+let chosenMeals = [];
+
 window.onload = function() {
   randomizeMeals(); // Call your randomization function on load
 };
@@ -42,7 +45,7 @@ function randomizeMeals() {
 
     if (chosenMeal) { // Update day plan only if a meal was chosen
       dayPlan.textContent = chosenMeal.name;
-      chosenMeals.push(chosenMeal); // Assuming a global chosenMeals array is defined
+      chosenMeals.push(chosenMeal); // Add chosen meal to the tracking list
       // Remove chosen meal from this day's available options
       const chosenMealIndex = availableMeals.indexOf(chosenMeal);
       availableMeals.splice(chosenMealIndex, 1);
