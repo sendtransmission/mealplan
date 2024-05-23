@@ -17,7 +17,7 @@ body {
   flex-direction: column;
   background-color: #fff;
   border-radius: 5px;
-  padding: 20px;
+  padding: 15px;
 
 }
 
@@ -35,7 +35,7 @@ body {
 
 .day-plan {
   flex-grow: 1; /* Allow day-plan to fill remaining space */
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: left; /* Center text within the square */
 }
 
