@@ -9,6 +9,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax values as needed */
   gap: 8px; /* Adjust spacing between squares */
   margin: 0 auto;
+  margin-bottom: 40px;
   width: 80%; /* Adjust container width for larger screens (optional) */
 }
 
