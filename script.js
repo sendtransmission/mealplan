@@ -1,6 +1,5 @@
 // Define meals with weights (higher weight = more likely)
 const meals = [
-  { name: "Hot dogs", weight: 1 },
   { name: "Carbonara", weight: 1 },
   { name: "Home Pizzas", weight: 1 },
   { name: "Chicken wraps", weight: 1 },
@@ -16,6 +15,19 @@ const meals = [
   { name: "Spaghetti Bolognese", weight: 1 },
   { name: "Baked potatoes", weight: 1 },
   { name: "French dip", weight: 1 },
+  { name: "Roast Chicken", weight: 1 },
+  { name: "Biryani", weight: 1 },
+  { name: "Buddha Bowls", weight: 1 },
+  { name: "Tuscan sausage pasta", weight: 1 },
+  { name: "Chicken for Thor", weight: 0.2 },
+  { name: "Sausage rolls and potato waffles", weight: 1 },
+  { name: "Pancakes", weight: 1 },
+  { name: "French Toast", weight: 1 },
+  { name: "Beans on toast", weight: 1 },
+  { name: "Prawn tempura, spring rolls etc.", weight: 1 },
+  { name: "Prawns, avocado and corn fritters", weight: 1 },
+  { name: "Something with rosemary fries", weight: 1 },
+  { name: "Swedish meatballs", weight: 1 },
 ];
 
 let chosenMeals = []; // Array to track chosen meals for the week
