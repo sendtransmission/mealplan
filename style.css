@@ -8,10 +8,6 @@ body {
   align-items: center; /* Center horizontally */
   min-height: 100vh; /* Set minimum height for full viewport */
 
-
-  /* Existing styles... */
-
-
 }
 
 h1 {
@@ -24,12 +20,9 @@ h1 {
 
 .grid-container {
   display: grid;
-
   grid-template-columns: 1fr;
-  
-  gap: 10px;
+  gap: 2px;
   border-radius: 10px;
-
   margin: 0 auto;
 }
 
