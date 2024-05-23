@@ -19,6 +19,7 @@ const meals = [
 ];
 
 window.onload = function() {
+  const chosenMeals = [];
   randomizeMeals(); // Call your randomization function on load
 };
 
