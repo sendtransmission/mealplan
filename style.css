@@ -15,7 +15,7 @@ body {
 
 .day-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #fff;
   border-radius: 5px;
   padding: 10px;
@@ -27,14 +27,16 @@ body {
 }
 
 .day-title {
-  font-size: 0.6em;
+  font-size: 1em;
   color: #332B00;
-  margin-bottom: 5px;
-  font-family: Arial, sans-serif;
+  padding: 5px;
+  margin-right: 15px;
+  font-family: Arial Black, sans-serif;
 
 }
 
 .day-plan {
+  padding: 5px;
   flex-grow: 1; /* Allow day-plan to fill remaining space */
   font-size: 1em;
   text-align: left; /* Center text within the square */
@@ -42,7 +44,7 @@ body {
 
 button {
   display: block;
-  margin: 5px auto;
+  margin: 15px auto;
   padding: 20px 50px;
   border: none;
   border-radius: 5px;
