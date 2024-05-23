@@ -1,91 +1,42 @@
 body {
   font-family: sans-serif;
   margin: 0;
-  //padding: 20px;
-  background-color: #444;
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center horizontally */
-  min-height: 100vh; /* Set minimum height for full viewport */
-
-}
-
-h1 {
-  text-align: center;
-  font-size: 3em;
-  color: #fff;
-  margin-top: 10px;
-  margin-bottom: 40px; /* Add space between title and grid */
+  background-color: #eee;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2px;
-  border-radius: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax values as needed */
+  gap: 10px; /* Adjust spacing between squares */
   margin: 0 auto;
-  width: 550px;
-
-}
-
-/* Styles for smaller screens (e.g., tablets and phones) */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax values as needed */
-  }
+  width: 80%; /* Adjust container width for larger screens (optional) */
 }
 
 .day-container {
-
   display: flex;
-
-  width: 100%;
-  flex-direction: row;
-  align-items: center; /* Text alignment within the container */
-  padding: 5px;
+  flex-direction: column;
+  background-color: #fff;
   border-radius: 5px;
-  cursor: pointer;
-  color:#111;
+  padding: 20px;
+
+}
+
+.weekend {
+  background-color: #ddd; /* Yellow color */
 }
 
 .day-title {
-  margin: 0;
-  font-size: 1em;
-  font-weight: bold;
-  color: #fff;
-  text-align: left;
-  margin-top: 5px;
-width: 10%;
+  font-size: 0.8em;
+  color: #332B00;
+  margin-bottom: 5px;
+  font-family: Arial, sans-serif;
+
 }
 
 .day-plan {
-  margin-top: auto;
-  margin-bottom: auto;
-  padding: 10px;
-  background-color: #FFf;
-  border-radius: 5px;
-  font-size: 1em;
-  align-items: center; /* Align content vertically */
-  width: 90%;
-  height: 2em; /* Set a fixed height here (adjust based on content) */
-  margin-left:20px;
-}
-
-
-.thursday {
-  margin-top: 5px;
-  padding: 10px;
-  background-color: #FFF;
-  border-radius: 5px;
-  font-size: 1em;
-  color: #666;
-  width: 90%;
-  height: 2em; /* Set a fixed height here (adjust based on content) */
-  margin-left:20px;
-}
-
-.day-plan .weekend {
-  background-color: #FFD700;
+  flex-grow: 1; /* Allow day-plan to fill remaining space */
+  font-size: 1.5em;
+  text-align: left; /* Center text within the square */
 }
 
 button {
