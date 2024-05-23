@@ -58,6 +58,7 @@ width: 30%;
   border-radius: 5px;
   font-size: 1em;
   //color: #666;
+  align-items: center; /* Align content vertically */
   width: 70%;
   height: 2em; /* Set a fixed height here (adjust based on content) */
   margin-left:20px;
