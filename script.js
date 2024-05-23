@@ -19,42 +19,23 @@ const meals = [
 ];
 
 
-function generateMealPlan() {
-  // Global variable for this function's scope
-  let chosenMeals = [];
+function shuffleAndAssignMeals() {
+  // Copy the meals array to avoid modifying the original
+  const availableMeals = [...meals];
 
-  // Call your randomization function here
-  randomizeMeals(chosenMeals);
-}
+  // Select seven random meals without repetition
+  const chosenMeals = [];
+  for (let i = 0; i < 7; i++) {
+    const randomIndex = Math.floor(Math.random() * availableMeals.length);
+    chosenMeals.push(availableMeals.splice(randomIndex, 1)[0]);
+  }
 
-window.onload = function() {
-  generateMealPlan(); // Call the function on load
-};
-function randomizeMeals() {
-  const dayPlanElements = document.querySelectorAll(".day-plan"); // Target .day-plan elements
-  const totalWeight = meals.reduce((acc, meal) => acc + meal.weight, 0);
-
-  dayPlanElements.forEach((dayPlan, index) => { // Loop through each dayPlan element
-    let randomValue = Math.random() * totalWeight;
-    let chosenMeal; // Local variable to store the chosen meal for this day
-
-    // Create a copy of the meals array for this day's selection
-    let availableMeals = [...meals]; 
-
-    for (const meal of availableMeals) {
-      randomValue -= meal.weight;
-      if (randomValue <= 0) {
-        chosenMeal = meal;
-        break;
-      }
-    }
-
-    if (chosenMeal) { // Update day plan only if a meal was chosen
-      dayPlan.textContent = chosenMeal.name;
-      chosenMeals.push(chosenMeal); // Add chosen meal to the global tracking list
-      // Remove chosen meal from this day's available options
-      const chosenMealIndex = availableMeals.indexOf(chosenMeal);
-      availableMeals.splice(chosenMealIndex, 1);
-    }
+  // Update the content of each day plan element
+  const dayPlanElements = document.querySelectorAll(".day-plan");
+  dayPlanElements.forEach((dayPlan, index) => {
+    dayPlan.textContent = chosenMeals[index];
   });
 }
+
+// Call the function on page load (assuming this script is loaded after the HTML)
+window.onload = shuffleAndAssignMeals;
