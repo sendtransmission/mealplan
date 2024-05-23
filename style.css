@@ -71,6 +71,17 @@ width: 30%;
   margin-left:20px;
 }
 
+.day-plan-fixed{
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #FFf;
+  border-radius: 5px;
+  font-size: 1em;
+  //color: #666;
+  width: 70%;
+  margin-left:20px;
+}
+
 .weekend {
   //color: #FFD700;
 }
