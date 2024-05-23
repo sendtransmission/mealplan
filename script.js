@@ -18,7 +18,6 @@ const meals = [
   { name: "French dip", weight: 1 },
 ];
 
-
 function shuffleAndAssignMeals() {
   // Copy the meals array to avoid modifying the original
   const availableMeals = [...meals];
@@ -30,12 +29,23 @@ function shuffleAndAssignMeals() {
     chosenMeals.push(availableMeals.splice(randomIndex, 1)[0]);
   }
 
-  // Update the content of each day plan element
+  // Option 1: Update within the Loop (uncomment this block)
+  /*
+  for (let i = 0; i < 7; i++) {
+    const chosenMeal = chosenMeals[i];
+    const dayPlan = document.querySelector(`.day-plan:nth-child(${i + 1})`);
+    if (dayPlan) {
+      dayPlan.textContent = chosenMeal;
+    }
+  }
+  */
+
+  // Option 2: Update After Selecting (uncomment this block)
   const dayPlanElements = document.querySelectorAll(".day-plan");
   dayPlanElements.forEach((dayPlan, index) => {
     dayPlan.textContent = chosenMeals[index];
   });
 }
 
-// Call the function on page load (assuming this script is loaded after the HTML)
+// Call the function on page load (assuming mealplan.js is loaded after the HTML)
 window.onload = shuffleAndAssignMeals;
