@@ -9,12 +9,12 @@ const meals = [
   { name: "Chicken and rice", weight: 1 },
   { name: "Chorizo and spring onion pasta", weight: 1 },
   { name: "Burgers/hot dogs", weight: 1 }, 
-  { name: "prawn and lime linguini", weight: 1 }, 
-  { name: "brinner", weight: 1 },
-  { name: "macaroni cheese", weight: 1 },
-  { name: "lasagne", weight: 1 },
-  { name: "spaghetti Bolognese", weight: 1 },
-  { name: "baked potatoes", weight: 1 },
+  { name: "Prawn and lime linguini", weight: 1 }, 
+  { name: "Brinner", weight: 1 },
+  { name: "Macaroni cheese", weight: 1 },
+  { name: "Lasagne", weight: 1 },
+  { name: "Spaghetti Bolognese", weight: 1 },
+  { name: "Baked potatoes", weight: 1 },
   { name: "French dip", weight: 1 },
 ];
 
