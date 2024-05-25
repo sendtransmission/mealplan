@@ -1,11 +1,25 @@
 const groceryList = [
-  { name: "Milk", category: "Breakfast" },
-  { name: "Bread", category: "Breakfast" },
-  { name: "Eggs", category: "Breakfast" },
-  { name: "Fruits", category: "All" }, // Can be in any category
-  { name: "Vegetables", category: "All" },
-  { name: "Chicken", category: "Dinner" },
-  { name: "Rice", category: "Dinner" },
+  { name: "50/50 bread", category: "Breakfast" },
+  { name: "Chocolate spread", category: "Breakfast" },
+  { name: "Weetabix minis", category: "Breakfast" },
+  { name: "Cornflakes", category: "Breakfast" }, // Can be in any category
+  { name: "Mixed peppers", category: "Lunch" },
+  { name: "Sugar snaps", category: "Lunch" },
+  { name: "Raspberries", category: "Lunch" },
+  { name: "Strawberries", category: "Lunch" },
+  { name: "Chicken Satay", category: "Lunch" },
+  { name: "Pepperami", category: "Lunch" },
+  { name: "Frubes", category: "Lunch" },
+  { name: "Smoothies", category: "Lunch" },
+  { name: "Doritos", category: "Lunch" },
+  { name: "Crisps", category: "Lunch" },
+  { name: "Apples", category: "Lunch" },
+  { name: "Croissant", category: "Lunch" },
+  { name: "Bagels", category: "Lunch" },
+  { name: "Brussels Pate", category: "Lunch" },
+  { name: "Cat Chicken", category: "Other" },
+  { name: "Bin liners", category: "Other" },
+  
   // ... Add more items with their categories
 ];
 
