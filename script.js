@@ -1,3 +1,48 @@
+const groceryList = [
+  { name: "Milk", category: "Breakfast" },
+  { name: "Bread", category: "Breakfast" },
+  { name: "Eggs", category: "Breakfast" },
+  { name: "Fruits", category: "All" }, // Can be in any category
+  { name: "Vegetables", category: "All" },
+  { name: "Chicken", category: "Dinner" },
+  { name: "Rice", category: "Dinner" },
+  // ... Add more items with their categories
+];
+
+function populateGroceryList() {
+  const breakfastList = document.getElementById("breakfast-items");
+  const lunchList = document.getElementById("lunch-items");
+  const dinnerList = document.getElementById("dinner-items");
+  const otherList = document.getElementById("other-items");
+
+  groceryList.forEach(item => {
+    const listItem = document.createElement("li");
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.value = item.name;
+    listItem.textContent = item.name;
+    listItem.appendChild(checkbox);
+
+    switch (item.category) {
+      case "Breakfast":
+        breakfastList.appendChild(listItem);
+        break;
+      case "Lunch":
+        lunchList.appendChild(listItem);
+        break;
+      case "Dinner":
+        dinnerList.appendChild(listItem);
+        break;
+      default:
+        otherList.appendChild(listItem);
+    }
+  });
+}
+
+populateGroceryList();
+
+
+
 // Define meals with weights (higher weight = more likely)
 const meals = [
   { name: "Carbonara", weight: 1 },
