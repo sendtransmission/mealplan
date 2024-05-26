@@ -95,6 +95,7 @@ let chosenMeals = []; // Array to track chosen meals for the week
 
 window.onload = function() {
   randomizeMeals(); // Call your randomization function on load
+  populateGroceryList();
 };
 
 
