@@ -56,15 +56,14 @@ button {
   transition: background-color 0.2s ease-in-out;
 }
 
-
 /* Grocery List Styles */
-ul {
+.grocery-list ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-li {
+.grocery-list li {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,12 +75,12 @@ li {
   font-weight: bold; /* Bold text for heading style */
 }
 
-li input[type="checkbox"] {
+.grocery-list li input[type="checkbox"] {
   margin: 0 10px 0 0; /* Add margin for spacing */
 }
 
 /* Optional: Checkbox Styling (Customize as desired) */
-li input[type="checkbox"] {
+.grocery-list li input[type="checkbox"] {
   appearance: none; /* Remove default checkbox appearance */
   width: 16px;
   height: 16px;
@@ -90,6 +89,6 @@ li input[type="checkbox"] {
   background-color: #fff; /* Initial checkbox color (unchecked) */
 }
 
-li input[type="checkbox"]:checked {
+.grocery-list li input[type="checkbox"]:checked {
   background-color: #33cc33; /* Checkbox color when checked (green) */
 }
