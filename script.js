@@ -23,38 +23,40 @@ const groceryList = [
   // ... Add more items with their categories
 ];
 
-function populateGroceryList() {
-  const breakfastList = document.getElementById("breakfast-items");
-  const lunchList = document.getElementById("lunch-items");
-  const dinnerList = document.getElementById("dinner-items");
-  const otherList = document.getElementById("other-items");
+function populateGroceryList(groceryList) {
+  // Loop through each category in the groceryList
+  for (const category of groceryList) {
+    const listElement = document.getElementById(category.name + '-items'); // Get the target list element
 
-  groceryList.forEach(item => {
-    const listItem = document.createElement("li");
-    const checkbox = document.createElement("input");
-    checkbox.type = "checkbox";
-    checkbox.value = item.name;
-    listItem.textContent = item.name;
-    listItem.appendChild(checkbox);
+    // Clear existing content (optional)
+    listElement.innerHTML = '';
 
-    switch (item.category) {
-      case "Breakfast":
-        breakfastList.appendChild(listItem);
-        break;
-      case "Lunch":
-        lunchList.appendChild(listItem);
-        break;
-      case "Dinner":
-        dinnerList.appendChild(listItem);
-        break;
-      default:
-        otherList.appendChild(listItem);
+    // Loop through each item in the category
+    for (const item of category.items) {
+      // Create a new list item element
+      const listItem = document.createElement('li');
+
+      // Create a checkbox element
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = category.name + '-' + item; // Set unique ID for checkbox
+
+      // Create a label element and connect it to the checkbox
+      const label = document.createElement('label');
+      label.textContent = item.name; // Set label text
+      label.setAttribute('for', checkbox.id); // Connect label to checkbox
+
+      // Append checkbox and label to the list item
+      listItem.appendChild(checkbox);
+      listItem.appendChild(label);
+
+      // Add the list item to the unordered list
+      listElement.appendChild(listItem);
     }
-  });
+  }
 }
 
 populateGroceryList();
-
 
 
 // Define meals with weights (higher weight = more likely)
