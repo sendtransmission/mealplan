@@ -56,7 +56,7 @@ function populateGroceryList(groceryList) {
   }
 }
 
-populateGroceryList();
+//populateGroceryList();
 
 
 // Define meals with weights (higher weight = more likely)
