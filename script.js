@@ -23,38 +23,40 @@ const groceryList = [
   // ... Add more items with their categories
 ];
 
-function populateGroceryList(groceryList) {
+
+
+//function populateGroceryList(groceryList) {
   // Loop through each category in the groceryList
-  for (const category of groceryList) {
-    const listElement = document.getElementById(category.name + '-items'); // Get the target list element
+  //for (const category of groceryList) {
+    //const listElement = document.getElementById(category.name + '-items'); // Get the target list element
 
     // Clear existing content (optional)
-    listElement.innerHTML = '';
+    //listElement.innerHTML = '';
 
     // Loop through each item in the category
-    for (const item of category.items) {
+    //for (const item of category.items) {
       // Create a new list item element
-      const listItem = document.createElement('li');
+      //const listItem = document.createElement('li');
 
       // Create a checkbox element
-      const checkbox = document.createElement('input');
-      checkbox.type = 'checkbox';
-      checkbox.id = category.name + '-' + item; // Set unique ID for checkbox
+      //const checkbox = document.createElement('input');
+      //checkbox.type = 'checkbox';
+      //checkbox.id = category.name + '-' + item; // Set unique ID for checkbox
 
       // Create a label element and connect it to the checkbox
-      const label = document.createElement('label');
-      label.textContent = item.name; // Set label text
-      label.setAttribute('for', checkbox.id); // Connect label to checkbox
+      //const label = document.createElement('label');
+      //label.textContent = item.name; // Set label text
+      //label.setAttribute('for', checkbox.id); // Connect label to checkbox
 
       // Append checkbox and label to the list item
-      listItem.appendChild(checkbox);
-      listItem.appendChild(label);
+     // listItem.appendChild(checkbox);
+     // listItem.appendChild(label);
 
       // Add the list item to the unordered list
-      listElement.appendChild(listItem);
-    }
-  }
-}
+     // listElement.appendChild(listItem);
+   // }
+ // }
+//}
 
 //populateGroceryList();
 
